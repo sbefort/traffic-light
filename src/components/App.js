@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Rectangle from './Rectangle';
-import Circle from './Circle';
+import LightFrame from './LightFrame';
+import Light from './Light';
 import Button from './Button';
 import Settings from './Settings';
 import fetchLight, { lightColors } from '../services/fetchLight';
@@ -30,11 +30,11 @@ const App = () => {
   return (
     <>
       <div className="d-flex justify-content-center">
-        <Rectangle isActive={isActive} onClick={initStoplight} className="bg-black rounded mt-3">
+        <LightFrame isActive={isActive} onClick={initStoplight} className="bg-black rounded mt-3">
           {lightColors.map((color) => (
-            <Circle key={color} color={color} isActive={activeLight === color} />
+            <Light key={color} color={color} isActive={activeLight === color} />
           ))}
-        </Rectangle>
+        </LightFrame>
       </div>
       {isActive && (
         <div className="d-flex justify-content-center">

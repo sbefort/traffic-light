@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Rectangle = ({ children, isActive, onClick, className = '' }) => {
+const LightFrame = ({ children, isActive, onClick, className = '' }) => {
   return (
     <div onClick={onClick} className={`${className} ${isActive ? '' : 'cursor-pointer'}`}>
       { children }
@@ -8,4 +8,4 @@ const Rectangle = ({ children, isActive, onClick, className = '' }) => {
   );
 }
 
-export default Rectangle;
+export default LightFrame;
