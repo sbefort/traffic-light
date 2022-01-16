@@ -8,15 +8,15 @@ const sequentialLight = (currentColor) => {
   return new Promise((resolve, reject) => {
     switch (currentColor) {
       case 'red':
-        resolve('yellow');
+        resolve('green');
         break;
 
       case 'yellow':
-        resolve('green');
+        resolve('red');
         break;
   
       case 'green':
-        resolve('red');
+        resolve('yellow');
         break;
 
       default:
@@ -27,11 +27,8 @@ const sequentialLight = (currentColor) => {
 }
 
 const randomLight = (currentColor) => {
-  const newColor = randomElement(lightColors);
-  // After choosing a random color, if it is equal to the current color, choose again.
-  if (newColor === currentColor) return randomLight(currentColor);
   return new Promise((resolve, reject) => {
-    resolve(newColor);
+    resolve(randomElement(lightColors.filter((color) => color !== currentColor)));
   });
 };
 
