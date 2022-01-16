@@ -38,7 +38,7 @@ const App = () => {
       </div>
       {isActive && (
         <div className="d-flex justify-content-center">
-          <Button onClick={changeLight} className="d-block mx-auto mt-2">Change!</Button>
+          <Button onClick={changeLight} className="mx-auto mt-2">Change!</Button>
         </div>
       )}
       <Settings mode={mode} setMode={setMode} />

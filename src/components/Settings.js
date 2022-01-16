@@ -24,31 +24,29 @@ const Settings = ({ mode, setMode }) => {
           <span className="btn-icon">&#9881;</span>
         </Button>
       </div>
-      {isOpen && (
-        <div className="card">
-          <div className="card-header d-flex justify-content-between">
-            <h2>Light Mode</h2>
-            <Button type="button" onClick={() => setIsOpen(false)} className="btn btn-vanilla">
-              &#10006;
-            </Button>
-          </div>
-          <div className="card-body">
-          {options.map((option, i) => (
-            <RadioButton
-              key={option.value}
-              id={`mode-${option.value}`}
-              type="radio"
-              value={option.value}
-              label={option.label}
-              isChecked={mode === option.value}
-              className={i > 0 ? 'mt-3' : ''}
-              onChange={(e) => setMode(e.target.value)}
-              helpText={option.helpText}
-            />
-          ))}
-          </div>
+      <div className={`card ${isOpen ? 'visible' : 'hidden'}`}>
+        <div className="card-header d-flex justify-content-between">
+          <h2>Light Mode</h2>
+          <Button type="button" onClick={() => setIsOpen(false)} className="btn btn-vanilla">
+            &#10006;
+          </Button>
         </div>
-      )}
+        <div className="card-body">
+        {options.map((option, i) => (
+          <RadioButton
+            key={option.value}
+            id={`mode-${option.value}`}
+            type="radio"
+            value={option.value}
+            label={option.label}
+            isChecked={mode === option.value}
+            className={i > 0 ? 'mt-3' : ''}
+            onChange={(e) => setMode(e.target.value)}
+            helpText={option.helpText}
+          />
+        ))}
+        </div>
+      </div>
     </div>
   );
 }

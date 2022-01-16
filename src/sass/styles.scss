@@ -1,13 +1,6 @@
 @import './_variables';
 @import './_spacing';
-
-@mixin button-reset {
-  padding: 0;
-  border: none;
-  font: inherit;
-  color: inherit;
-  background-color: transparent;
-}
+@import './_mixins';
 
 * {
   font-family: sans-serif;
@@ -24,10 +17,6 @@ h2 {
   margin: 0;
   font-size: 1.1rem;
   color: $black;
-}
-
-.d-block {
-  display: block;
 }
 
 .d-inline-block {
@@ -60,6 +49,7 @@ h2 {
   height: 50px;
   width: 50px;
   margin: 10px;
+  transition: 0.3s all;
 
   &.green {
     background-color: $green;
@@ -110,6 +100,7 @@ h2 {
   background-color: $white;
   box-shadow: $shadow;
   border-radius: $border-radius;
+  transition: 0.5s all;
 
   .card-header {
     background-color: $offwhite;
@@ -124,6 +115,14 @@ h2 {
     padding: $spacing-medium;
     border-bottom-left-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
+  }
+
+  &.visible {
+    opacity: 1;
+  }
+
+  &.hidden {
+    opacity: 0;
   }
 }
 
