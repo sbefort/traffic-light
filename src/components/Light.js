@@ -1,8 +1,10 @@
 import React from 'react';
 
-const Light = ({ color, isActive }) => {
+const Light = ({ color, isActive, ariaLabel }) => {
+  const classNames = ['circle'];
+  if (isActive) classNames.push(color);
   return (
-    <div className={`circle ${isActive ? color : ''}`} />
+    <div aria-label={ariaLabel} className={classNames.join(' ')} />
   );
 }
 

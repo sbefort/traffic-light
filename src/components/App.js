@@ -32,7 +32,7 @@ const App = () => {
       <div className="d-flex justify-content-center">
         <LightFrame isActive={isActive} onClick={initStoplight} className="bg-black rounded mt-3">
           {lightColors.map((color) => (
-            <Light key={color} color={color} isActive={activeLight === color} />
+            <Light key={color} color={color} isActive={activeLight === color} ariaLabel={`${color} light`} />
           ))}
         </LightFrame>
       </div>

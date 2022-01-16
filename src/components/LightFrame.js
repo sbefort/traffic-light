@@ -1,8 +1,10 @@
 import React from 'react';
 
 const LightFrame = ({ children, isActive, onClick, className = '' }) => {
+  const classNames = [className];
+  if (isActive) classNames.push('cursor-pointer')
   return (
-    <div onClick={onClick} className={`${className} ${isActive ? '' : 'cursor-pointer'}`}>
+    <div aria-label="traffic light" onClick={onClick} className={classNames.join(' ')}>
       { children }
     </div>
   );

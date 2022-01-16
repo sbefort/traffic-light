@@ -1,8 +1,10 @@
 import React from 'react';
 
 const Circle = ({ color, isActive }) => {
+  const classNames=['circle'];
+  if (isActive) classNames.push(color);
   return (
-    <div className={`circle ${isActive ? color : ''}`} />
+    <div className={classNames.join(' ')} />
   );
 }
 
