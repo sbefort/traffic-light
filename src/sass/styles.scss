@@ -1,0 +1,137 @@
+@import './_variables';
+@import './_spacing';
+
+@mixin button-reset {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+* {
+  font-family: sans-serif;
+  color: $grey;
+  font-weight: 400;
+}
+
+body {
+  background-color: $lightgrey;
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: $black;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.rounded {
+  border-radius: $border-radius;
+}
+
+.circle {
+  background-color: $white;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+
+  &.green {
+    background-color: $green;
+  }
+
+  &.yellow {
+    background-color: $yellow;
+  }
+
+  &.red {
+    background-color: $red;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.absolute-top-right {
+  position: absolute;
+  top: 0.3rem;
+  right: 1.3rem;
+}
+
+.btn {
+  padding: 0.2rem 0.5rem;
+  font-size: 1.1rem;
+
+  &.btn-vanilla {
+    @include button-reset;
+  }
+
+  .btn-icon {
+    font-size: 2.3rem;
+  }
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+.bg-black {
+  background-color: $black;
+}
+
+.card {
+  max-width: 250px;
+  background-color: $white;
+  box-shadow: $shadow;
+  border-radius: $border-radius;
+
+  .card-header {
+    background-color: $offwhite;
+    border-bottom: 1px solid $lightgrey;
+    padding: $spacing-medium;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+  }
+
+  .card-body {
+    background-color: $white;
+    padding: $spacing-medium;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  }
+}
+
+p {
+  line-height: 150%;
+  margin: 0;
+
+  &.font-small {
+    font-size: 0.8rem;
+  }
+}

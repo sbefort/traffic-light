@@ -1,0 +1,29 @@
+@import './_variables';
+
+.mx-auto {
+  margin: 0 auto;
+}
+
+.mt-1 {
+  margin-top: $spacing-small;
+}
+
+.mt-2 {
+  margin-top: $spacing-medium;
+}
+
+.mt-3 {
+  margin-top: $spacing-large;
+}
+
+.p-1 {
+  padding: $spacing-small;
+}
+
+.p-2 {
+  padding: $spacing-medium;
+}
+
+.p-3 {
+  padding: $spacing-large;
+}
